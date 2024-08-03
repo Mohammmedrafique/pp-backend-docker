@@ -6,9 +6,10 @@ const assignmentRoutes = require("./routes/assignmentRoutes");
 const submissionRoutes = require("./routes/submissionRoutes");
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger-output.json");
-
+const cors = require("cors");
 require("dotenv").config();
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3000;
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Connect to MongoDB
