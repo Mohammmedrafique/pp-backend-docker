@@ -11,7 +11,7 @@
     "http"
   ],
   "paths": {
-    "/": {
+    "/assignments": {
       "post": {
         "description": "",
         "parameters": [
@@ -81,7 +81,7 @@
         }
       }
     },
-    "/{id}": {
+    "/assignments/{id}": {
       "put": {
         "description": "",
         "parameters": [
@@ -115,7 +115,7 @@
           }
         }
       },
-      "delete": {
+      "/assignments/delete/{id}": {
         "description": "",
         "parameters": [
           {
@@ -149,7 +149,7 @@
         }
       }
     },
-    "/grade/{submissionId}": {
+    "/submissions/grade/{submissionId}": {
       "post": {
         "description": "",
         "parameters": [
@@ -199,7 +199,7 @@
         }
       }
     },
-    "/report/{studentId}": {
+    "/submissions/report/{studentId}": {
       "get": {
         "description": "",
         "parameters": [
@@ -231,7 +231,7 @@
         }
       }
     },
-    "/register": {
+    "/auth/register": {
       "post": {
         "description": "",
         "parameters": [
@@ -264,7 +264,7 @@
         }
       }
     },
-    "/login": {
+    "/auth/login": {
       "post": {
         "description": "",
         "parameters": [
