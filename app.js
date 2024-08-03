@@ -293,10 +293,13 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/authRoutes");
 const assignmentRoutes = require("./routes/assignmentRoutes");
 const submissionRoutes = require("./routes/submissionRoutes");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
+
 require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 3000;
-
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGODB_URI)
